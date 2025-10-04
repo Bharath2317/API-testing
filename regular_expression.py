@@ -13,14 +13,29 @@
 
 # Regex
 
-import re
-email = input("What is your email? ").strip()
-# if re.search("..*@..*",email):
-# if re.search(r"^.+@.+\.com$",email):
-# if re.search(r"^[^@]+@[^@]+\.com$",email):
-# if re.search(r"^[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.com$",email):
-# if re.search(r"^\w+@\w+\.com$",email):
-if re.search(r"^\w+@\w+\.(edu|gov|com)$",email,re.IGNORECASE):
-  print("Valid")
-else:
-   print("Invalid")  
+# import re
+# email = input("What is your email? ").strip()
+# # if re.search("..*@..*",email):
+# # if re.search(r"^.+@.+\.com$",email):
+# # if re.search(r"^[^@]+@[^@]+\.com$",email):
+# # if re.search(r"^[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.com$",email):
+# # if re.search(r"^\w+@\w+\.com$",email):
+# if re.search(r"^\w+@\w+\.(edu|gov|com)$",email,re.IGNORECASE):
+#   print("Valid")
+# else:
+#    print("Invalid")  
+
+# import re
+# email = input("What is your email? ").strip()
+# if mathes := re.search(r"^\w+@(\w+\.)?\w+\.(com|edu|gov)$",email):
+#   print("Valid")
+# else:
+#   print("Invalid")  
+
+
+###Cleaning up user input
+name = input("What is your name? ").strip()
+if "," in name:
+  firstname,secondname = name.split(",")
+  name = f"{firstname} {secondname}"
+print(f"Hello {name}")  
