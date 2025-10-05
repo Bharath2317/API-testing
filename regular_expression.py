@@ -34,8 +34,22 @@
 
 
 ###Cleaning up user input
-name = input("What is your name? ").strip()
-if "," in name:
-  firstname,secondname = name.split(",")
-  name = f"{firstname} {secondname}"
-print(f"Hello {name}")  
+# name = input("What is your name? ").strip()
+# if "," in name:
+#   firstname,secondname = name.split(",")
+#   name = f"{firstname} {secondname}"
+# print(f"Hello {name}")  
+
+import re
+# name = input("What is your name? ").strip()
+
+# if matches:= re.search(r"^(.+), *(.+)$",name):
+#   # first,last = matches.groups()
+#   # name = f"{last} {first}"
+#   name = matches.group(2)+" "+matches.group(1)
+# print(name)  
+
+url = input("URL: ")
+# matches = re.sub(r"^https?://(?:www\.)?twitter\.com/","",url)
+if matches := re.search(r"^https?://(?:www\.)?twitter\.com/(.+)",url):
+  print(matches.group(1))
